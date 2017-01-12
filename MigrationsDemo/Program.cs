@@ -16,6 +16,7 @@ namespace MigrationsDemo
             using (var db = new BlogContext())
             {
                 db.Blogs.Add(new Blog { Name = "Another Blog " });
+                db.Blogs.Add(new Blog { Url = "http://blog.blog.com" });
                 db.SaveChanges();
 
                 foreach (var blog in db.Blogs)
